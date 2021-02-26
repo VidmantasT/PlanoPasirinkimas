@@ -9,12 +9,12 @@ namespace PlanoPasirinkimas
     public class Plans
     {
         private string title;
-        private string GB;
-        private string minutes;
-        private string SMS;
+        private int GB;
+        private int minutes;
+        private int SMS;
         private double price;
 
-        public Plans(string title, string gB, string minutes, string sMS, double price)
+        public Plans(string title, int gB, int minutes, int sMS, double price)
         {
             this.title = title;
             GB = gB;
@@ -28,17 +28,17 @@ namespace PlanoPasirinkimas
             return this.title;
         }
 
-        public string GetGB()
+        public int GetGB()
         {
             return this.GB;
         }
 
-        public string GetMinutes()
+        public int GetMinutes()
         {
             return this.minutes;
         }
 
-        public string GetSMS()
+        public int GetSMS()
         {
             return this.SMS;
         }

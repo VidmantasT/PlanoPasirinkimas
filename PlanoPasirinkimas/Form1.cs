@@ -34,9 +34,9 @@ namespace PlanoPasirinkimas
             {
                 string[] tempArr = lines[i].Split(' ');
                 string temp1 = tempArr[0];
-                string temp2 = tempArr[1];
-                string temp3 = tempArr[2];
-                string temp4 = tempArr[3];
+                int temp2 = Convert.ToInt32(tempArr[1]);
+                int temp3 = Convert.ToInt32(tempArr[2]);
+                int temp4 = Convert.ToInt32(tempArr[3]);
                 double temp5 = double.Parse(tempArr[4]);
 
                 plans.Add(new Plans(temp1, temp2, temp3, temp4, temp5));
@@ -47,11 +47,11 @@ namespace PlanoPasirinkimas
             {
                 string[] tempArr = new string[5];
 
-                tempArr[0] = el.GetTitle();
-                tempArr[1] = el.GetGB();
-                tempArr[2] = el.GetMinutes();
-                tempArr[3] = el.GetSMS();
-                tempArr[4] = el.GetGB().ToString();
+                tempArr[0] = el.GetTitle().ToString();
+                tempArr[1] = el.GetGB().ToString();
+                tempArr[2] = el.GetMinutes().ToString();
+                tempArr[3] = el.GetSMS().ToString();
+                tempArr[4] = el.GetPrice().ToString();
 
                 listViewItem = new ListViewItem(tempArr);
                 listView1.Items.Add(listViewItem);
